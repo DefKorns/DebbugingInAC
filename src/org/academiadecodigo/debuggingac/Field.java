@@ -1,4 +1,11 @@
 package org.academiadecodigo.debuggingac;
 
-public class Field {
+public interface Field {
+
+    void init() throws InterruptedException;
+
+    int getWidth();
+
+    int getHeight();
+
 }
