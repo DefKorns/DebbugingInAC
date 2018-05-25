@@ -16,7 +16,7 @@ public class Menu {
     private Buttons back;
     private boolean selection;
     private boolean secondaryMenu;
-    
+
     public Menu() throws InterruptedException {
         new MouseMenu();
         menuEvent = new MenuEvent();
