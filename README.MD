@@ -1,2 +1,5 @@
-# DebbugingInAC
-Jogo de grupo &lt;AC_>
+# Debugging in <AC_>
+### Clean every single bug from your code
+
+![Alt text](resources/images/menu/menu.png?raw=true "Title")
+
