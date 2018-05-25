@@ -1,9 +1,9 @@
 package org.academiadecodigo.debuggingac.menu;
 
 public enum ButtonType {
-    PLAY(812, 604, 1123, 695),
-    TUTORIAL(759, 739, 938, 788),
-    CREDITS(990, 739, 1167, 788),
+    PLAY(326, 107, 875, 639),
+    TUTORIAL(14, 757, 223, 778),
+    CREDITS(1065, 757, 1186 , 778),
     BACK(43, 692, 744, 766);
 
     private int startX;
