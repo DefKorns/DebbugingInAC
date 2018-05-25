@@ -6,7 +6,6 @@ public class Game {
     private Field field;
 
 
-
     public Game() {
         System.out.println("game start");
     }
@@ -18,18 +17,14 @@ public class Game {
     }
 
     private void init() throws InterruptedException {
-
         field = new FieldEvent();
         field.init();
-
         startGame();
 
     }
+
     private void startGame() throws InterruptedException {
         menu();
     }
-
-
-
 
 }

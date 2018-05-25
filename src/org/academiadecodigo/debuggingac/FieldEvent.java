@@ -1,7 +1,5 @@
 package org.academiadecodigo.debuggingac;
 
-import org.academiadecodigo.debuggingac.simplegraphics.graphics.Color;
-import org.academiadecodigo.debuggingac.simplegraphics.graphics.Text;
 import org.academiadecodigo.debuggingac.simplegraphics.pictures.Picture;
 
 public class FieldEvent implements Field {
@@ -11,6 +9,7 @@ public class FieldEvent implements Field {
 
 
     public FieldEvent() {
+        background = new Picture(0,0, "resources/images/menu/goomba.jpg");
         fieldWidth = background.getWidth();
         fieldHeight = background.getHeight();
     }
@@ -23,9 +22,12 @@ public class FieldEvent implements Field {
         return fieldHeight;
     }
 
+
     @Override
-    public void init() throws InterruptedException {
+    public void init() throws InterruptedException{
         background.draw();
+        Thread.sleep(100000);
+
     }
 
     @Override
