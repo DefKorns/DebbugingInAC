@@ -16,20 +16,17 @@ public class Menu {
     private Buttons back;
     private boolean selection;
     private boolean secondaryMenu;
-
-
-
+    
     public Menu() throws InterruptedException {
         new MouseMenu();
         menuEvent = new MenuEvent();
         loading();
-        selection = false;
-        secondaryMenu = false;
         play = ButtonFactory.getNewButton(ButtonType.PLAY);
         tutorial = ButtonFactory.getNewButton(ButtonType.TUTORIAL);
         credits = ButtonFactory.getNewButton(ButtonType.CREDITS);
         back = ButtonFactory.getNewButton(ButtonType.BACK);
-
+        selection = false;
+        secondaryMenu = false;
     }
 
     private int getMouseX() {

@@ -16,9 +16,9 @@ import java.util.List;
  * Instantiate a Mouse for obtaining mouse handling capability
  */
 public class Mouse implements MouseListener, MouseMotionListener {
-    private JPanel pane;
     MouseHandler handler;
     List<MouseEventType> mouseEventArrayList;
+    private JPanel pane;
 
     /**
      * @param handler the mouse handler
@@ -37,7 +37,7 @@ public class Mouse implements MouseListener, MouseMotionListener {
         /**
          * OSX Cursor
          */
-       // pane.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon("resources/images/menu/cursor00.png").getImage(), new Point(44, 175), "idle"));
+        // pane.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon("resources/images/menu/cursor00.png").getImage(), new Point(44, 175), "idle"));
     }
 
     /**
@@ -59,8 +59,8 @@ public class Mouse implements MouseListener, MouseMotionListener {
     }
 
     /**
-     * @see MouseHandler#mouseClicked(org.academiadecodigo.debuggingac.simplegraphics.mouse.MouseEvent)
      * @param e the event
+     * @see MouseHandler#mouseClicked(org.academiadecodigo.debuggingac.simplegraphics.mouse.MouseEvent)
      */
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -81,8 +81,8 @@ public class Mouse implements MouseListener, MouseMotionListener {
     }
 
     /**
-     * @see MouseHandler#mouseMoved(org.academiadecodigo.debuggingac.simplegraphics.mouse.MouseEvent)
      * @param e the event
+     * @see MouseHandler#mouseMoved(org.academiadecodigo.debuggingac.simplegraphics.mouse.MouseEvent)
      */
     @Override
     public void mouseMoved(MouseEvent e) {
