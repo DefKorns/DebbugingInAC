@@ -2,6 +2,8 @@ package org.academiadecodigo.debuggingac.simplegraphics.mouse;
 
 import org.academiadecodigo.debuggingac.simplegraphics.graphics.Canvas;
 
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -14,7 +16,7 @@ import java.util.List;
  * Instantiate a Mouse for obtaining mouse handling capability
  */
 public class Mouse implements MouseListener, MouseMotionListener {
-
+    private JPanel pane;
     MouseHandler handler;
     List<MouseEventType> mouseEventArrayList;
 
@@ -27,6 +29,15 @@ public class Mouse implements MouseListener, MouseMotionListener {
 
         this.handler = handler;
         mouseEventArrayList = new ArrayList<>();
+        pane = (JPanel) Canvas.getInstance().getFrame().getContentPane();
+        /**
+         * Windows Cursor
+         */
+        pane.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon("resources/images/menu/cursor00.png").getImage(), new Point(0, 0), "idle"));
+        /**
+         * OSX Cursor
+         */
+       // pane.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon("resources/images/menu/cursor00.png").getImage(), new Point(44, 175), "idle"));
     }
 
     /**
@@ -93,10 +104,26 @@ public class Mouse implements MouseListener, MouseMotionListener {
 
     @Override
     public void mousePressed(MouseEvent e) {
+        /**
+         * Windows Cursor
+         */
+        pane.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon("resources/images/menu/cursor02.png").getImage(), new Point(0, 0), "hit"));
+        /**
+         * OSX Cursor
+         */
+        //pane.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon("resources/images/menu/cursor02.png").getImage(), new Point(44, 175), "hit"));
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
+        /**
+         * Windows Cursor
+         */
+        pane.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon("resources/images/menu/cursor01.png").getImage(), new Point(0, 0), "aim"));
+        /**
+         * OSX Cursor
+         */
+        //pane.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon("resources/images/menu/cursor01.png").getImage(), new Point(44, 175), "aim"));
     }
 
     @Override

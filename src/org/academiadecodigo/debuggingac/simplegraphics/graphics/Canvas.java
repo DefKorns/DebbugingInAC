@@ -32,6 +32,16 @@ public class Canvas {
         frame.add(component);
         frame.pack();
         frame.setLocation(LOCATION_OFFSET, LOCATION_OFFSET);
+        frame.setSize(1280, 720);
+        frame.setTitle("Debugging in <AC_>");
+        /**
+         * Windows Cursor
+         */
+        frame.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon("resources/images/menu/cursor00.png").getImage(),new Point(0,0),"initial d"));
+        /**
+         * OSX Cursor
+         */
+        //frame.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(new ImageIcon("resources/images/menu/cursor00.png").getImage(), new Point(44, 175), "initial cursor"));
         frame.setVisible(true);
     }
 
@@ -207,5 +217,9 @@ public class Canvas {
             }
             return new Dimension(maxx + MARGIN, maxy + MARGIN);
         }
+    }
+
+    public JFrame getFrame() {
+        return frame;
     }
 }
