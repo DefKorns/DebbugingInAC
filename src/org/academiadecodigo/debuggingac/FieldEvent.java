@@ -26,8 +26,7 @@ public class FieldEvent implements Field {
     @Override
     public void init() throws InterruptedException{
         background.draw();
-        Thread.sleep(100000);
-
+       // Thread.sleep(10);
     }
 
     @Override
