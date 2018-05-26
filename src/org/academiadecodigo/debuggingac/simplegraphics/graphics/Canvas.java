@@ -32,7 +32,7 @@ public class Canvas {
         frame.add(component);
         frame.pack();
         frame.setLocation(LOCATION_OFFSET, LOCATION_OFFSET);
-        frame.setSize(1280, 720);
+        frame.setSize(1200, 800);
         frame.setTitle("Debugging in <AC_>");
         /**
          * Windows Cursor

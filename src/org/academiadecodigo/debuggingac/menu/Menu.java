@@ -1,3 +1,4 @@
+
 package org.academiadecodigo.debuggingac.menu;
 
 import org.academiadecodigo.debuggingac.simplegraphics.mouse.Mouse;
@@ -18,6 +19,7 @@ public class Menu {
     private boolean secondaryMenu;
 
     public Menu() throws InterruptedException {
+
         new MouseMenu();
         menuEvent = new MenuEvent();
         loading();
@@ -27,6 +29,7 @@ public class Menu {
         back = ButtonFactory.getNewButton(ButtonType.BACK);
         selection = false;
         secondaryMenu = false;
+
     }
 
     private int getMouseX() {
@@ -51,38 +54,57 @@ public class Menu {
                     mainMenu();
                 }
             }
+            /*
+             * If the player presses start
+             */
             if ((getMouseX() >= play.getStartX() && getMouseX() <= play.getEndX()) &&
                     (getMouseY() >= play.getStartY() && getMouseY() <= play.getEndY())) {
                 menuEvent.killSoundMenu();
                 selection = true;
             }
+            /*
+             * If the the Credits submenu is selected
+             */
             if ((getMouseX() >= tutorial.getStartX() && getMouseX() <= tutorial.getEndX()) &&
                     (getMouseY() >= tutorial.getStartY() && getMouseY() <= tutorial.getEndY())) {
                 secondaryMenu = true;
                 tutorial();
+                menuEvent.removeCredits();
             }
+            /*
+             * If the Tutorial submenu is selected
+             */
             if ((getMouseX() >= credits.getStartX() && getMouseX() <= credits.getEndX()) &&
                     (getMouseY() >= credits.getStartY() && getMouseY() <= credits.getEndY())) {
                 secondaryMenu = true;
                 credits();
+                menuEvent.removeTutorial();
             }
         }
     }
 
     private void loading() throws InterruptedException {
+
         menuEvent.init();
         menuEvent.soundMenu();
         mainMenu();
+
     }
     private void tutorial() {
+
         menuEvent.tutorial();
+
     }
     private void credits() {
+
         menuEvent.credits();
+
     }
 
-    private void mainMenu() {
+    private void mainMenu() throws InterruptedException{
+
         menuEvent.mainMenu();
+
     }
 
 
@@ -95,7 +117,9 @@ public class Menu {
         }
 
         void addEventListener() {
+
             mouse.addEventListener(MouseEventType.MOUSE_CLICKED);
+
         }
 
         @Override
